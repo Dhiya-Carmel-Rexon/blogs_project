@@ -1,0 +1,17 @@
+
+
+   
+
+<!-- myapp/templates/basic.html -->
+{% extends "base.html" %}
+
+{% block title %}Add Blog Post{% endblock title %}
+
+{% block content %}
+    <h2>Add a New Blog Post</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <button type="submit">Save</button>
+    </form>
+{% endblock content %}
